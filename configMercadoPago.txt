@@ -1,0 +1,6 @@
+
+
+Vendedor {"id":1177371959,"nickname":"TESTXXWLDNO2","password":"qatest5944","site_status":"active","email":"test_user_95009396@testuser.com"} seller
+
+
+Comprador {"id":1177374528,"nickname":"TESTJJZ27VX3","password":"qatest5976","site_status":"active","email":"test_user_26969448@testuser.com"} buyer
