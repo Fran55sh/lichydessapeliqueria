@@ -14,13 +14,13 @@
     array.data.forEach((curso) => {
   
       let newElement = document.createElement("div");
-      newElement.classList.add("cursoCard");
+      newElement.classList.add("curso_card");
       newElement.innerHTML = `
-            <div >
+            <div class="curso_container">
             <h2>${curso.cursoId.nombre}</h2>
-            <video id="videoPlayer" width="50%" controls muted="muted" poster="/assets/1.jpg">
-            <source src="/video/${curso._id}" type="video/mp4" />
-        </video>
+            <video id="videoPlayer" width="50%" controls muted="muted" poster="/assets/1.jpg" oncontextmenu="return false;" controlsList="nodownload">
+              <source src="/video/${curso._id}" type="video/mp4" />
+            </video>
             </div>
   
       `;

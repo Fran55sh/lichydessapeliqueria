@@ -245,7 +245,7 @@ aside .signBtn button:nth-child(2) {
 
 .texto .texto-principal {
   text-align: justify;
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin-bottom: 0;
 }
 
@@ -296,7 +296,7 @@ aside .signBtn button:nth-child(2) {
 
 .contenido-mobile .texto .texto-principal {
   text-align: justify;
-  font-size: 1rem;
+  font-size: 1.25rem;
   margin-bottom: 0;
 }
 
@@ -460,7 +460,7 @@ aside .signBtn button:nth-child(2) {
   background-image: linear-gradient(312deg, #ffcbdb 0%, #fa6691 100%);
   border-radius: 30px;
   position: absolute;
-  top: 45%;
+  top: 37%;
   left: -5px;
   height: 100%;
   width: 108%;
@@ -559,6 +559,46 @@ aside .signBtn button:nth-child(2) {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 80vh;
+}
+
+.mis_cursos_body {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffbdd1), to(#ffbdd1));
+  background: linear-gradient(180deg, #ffbdd1 0%, #ffbdd1 100%);
+}
+
+.curso_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+  width: 100%;
+}
+
+.curso_card .curso_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.curso_card .curso_container video {
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.footer_mis_cursos {
+  margin-top: 20px !important;
 }
 
 body {

@@ -22,7 +22,7 @@ router.get("/video/:id", async function  (req, res) {
         }
         const videoPath = path;
         const videoSize = fs.statSync(path).size;
-        const CHUNK_SIZE = 10 ** 6;
+        const CHUNK_SIZE = 100 ** 6;
         const start = Number(range.replace(/\D/g, ""));
         const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
         const contentLength = end - start + 1;

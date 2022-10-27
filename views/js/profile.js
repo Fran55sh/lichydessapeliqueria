@@ -56,7 +56,6 @@ function renderCard(array) {
           <div >
           
           <img class="hero-profile-img" src="/./assets/1.jpg" alt="">
-          <div class="mask"></div>
           </div>
           
           <div class="hero-description-bk"></div>
