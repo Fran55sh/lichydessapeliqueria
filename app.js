@@ -33,5 +33,5 @@ app.use(paymentRoutes)
 
 
 app.listen(config.port,()=>{
-    console.log(`express server started on port http://168.181.185.201:${config.port}`);
+    console.log(`express server started on port http://localhost:${config.port}`);
 });
