@@ -1,64 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/style.css" />
-  <title>Document</title>
-</head>
+  <body>
+    <div class="header">
+      <header>
+        <nav class="nav">
+          <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="adminCurso.ejs">Cursos</a></li>
+          </ul>
+        </nav>
+        <div class="line"></div>
+      </header>
+    </div>
 
-<body>
+    <h2 class="titulo">Crear curso Nuevo</h2>
 
-  <div class="header">
-    <header>
+    <form
+      class="form-nuevo-curso"
+      method="POST"
+      action="/api/authenticated"
+      enctype="multipart/form-data"
+    >
+      <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="fileName" />
+      </div>
+      <div>
+        <label for="descripcion">Descripcion</label>
+        <textarea name="descripcion" id="descripcion" rows="4" cols="50"></textarea> 
+      </div>
+      <div>
+        <label for="precio">Precio</label> <input type="number" name="precio" />
+      </div>
+      <div>
+        <label for="files">Video</label> <input type="file" name="files" />
+      </div>
+      <div>
+        <label for="thumbail">Thumbnail</label>
+        <input type="file" name="thumbnail" />
+      </div>
+      <div><input type="submit" value="Subir" /></div>
+      <img src="../views/assets/WhatsApp Image 2021-10-18 at 16.21.31.jpeg" alt="">
+    </form>
 
-      <nav class="nav">
-        <ul>
-          <li><a href="">Inicio</a> </li>
-          <li><a href="adminCurso.ejs">Cursos</a></li>
-        </ul>
-      </nav>
-      <div class="line"></div>
-    </header>
-
-  </div>
-
-  <h2>Crear curso Nuevo</h2>
-
-  <form  method="POST" action="/api/authenticated" enctype="multipart/form-data">
-    
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="fileName">
-
-    <label for="descripcion">Descripcion</label>
-    <input type="text" name="descripcion" id="descripcion">
-
-    <label for="precio">Precio</label>
-    <input type="number" name="precio">
-
-    <input type="file" name="files">
-
-    <input type="submit" value="Subir">
-
-  </form>
-
-  <h2>Todos los cursos</h2>
-  <button type="button" id="btnListarCursos">listar cursos</button>
-
-  <div id="cursos">
-
-
-  </div>
-
-
-
-  <script src="./js/admin.js"></script>
-
-</body>
-
+    <div class="lista-cursos">
+      <h2>Todos los cursos</h2>
+      <button type="button" id="btnListarCursos">listar cursos</button>
+      <div id="cursos"></div>
+    </div>
+    <script src="/js/admin.js"></script>
+  </body>
 </html>

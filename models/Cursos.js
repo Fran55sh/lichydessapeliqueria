@@ -15,6 +15,10 @@ const CursoSchema = new mongoose.Schema({
     precio:{
         type:Number,
         required: true
+    },
+    thumbnail:{
+        type : String,
+        required: true
     }
 
 });

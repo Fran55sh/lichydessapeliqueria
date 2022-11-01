@@ -69,28 +69,45 @@ class Cursos {
       console.log(req.files);
       let file = req.files.files;
       let filename = file.name;
-      console.log(filename);
-      // console.log(req.body.fileName);
-      console.log(req.body.description);
 
       file.mv("./views/assets/" + filename, function (err) {
         if (err) {
           res.send(err);
           return;
         } else {
-          console.log("file uploaded");
+          console.log("video uploaded");
         }
       });
+      
+      
+      let thumbnailFile = req.files.thumbnail
+      let thumbnailName = thumbnailFile.name
+
+      thumbnailFile.mv("./views/assets/" + thumbnailName, function (err) {
+        if (err) {
+          res.send(err);
+          return;
+        } else {
+          console.log("thumbnail uploaded");
+        }
+      });
+
+
+
       const filePath = `./assets/${filename}`;
+      const thumbnail = `./assets/${thumbnailName}`;
+      console.log(filePath)
+      console.log(thumbnail)
 
       /* Creating a new curso in the database. */
-      const { nombre, description, precio } = req.body;
+      const { nombre, descripcion, precio } = req.body;
       try {
         const createCurso = await cursoModel.create({
           nombre,
-          descripcion: description,
+          descripcion,
           filePath,
           precio,
+          thumbnail,
         });
         res.redirect('api/authenticated')
       } catch (error) {
@@ -115,18 +132,27 @@ class Cursos {
    */
   static async deleteCurso(req, res) {
     try {
-      console.log(req.body.nombre)
-      const nombre = req.body.nombre;
-      const curso = await cursoModel.findOne({ nombre: nombre });
+      const id = req.params.id;
+      const curso = await cursoModel.findById(id);
+      console.log(curso)
       if(curso){
         const cursoObj = JSON.parse(JSON.stringify(curso));
-        console.log(`./views/${cursoObj.filePath.slice(2)}`)
+
+        unlink(`./views/${cursoObj.thumbnail.slice(2)}`, (err) => {
+          
+          if (err) {
+            console.log("error");
+          } else {
+            console.log("thumbnail removed");
+          }
+        })
+
         unlink(`./views/${cursoObj.filePath.slice(2)}`, (err) => {
           
           if (err) {
             console.log("error");
           } else {
-            console.log("file removed");
+            console.log("video removed");
           }
         });
   

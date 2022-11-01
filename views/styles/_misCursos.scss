@@ -1,6 +1,10 @@
 .mis_cursos_body{
-    background: linear-gradient(180deg, rgba(255,189,209,1) 0%, rgba(255,189,209,1) 100%);
+
+    background: $primary-color-gradient;
+    background-size: cover;
+
 }
+
 
 .curso_card{
     display: flex;

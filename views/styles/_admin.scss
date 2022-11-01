@@ -1,0 +1,33 @@
+.form-nuevo-curso{
+    div{
+
+        display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin-left: 20px;
+    }
+
+        label   {
+            margin: 5px;
+        }
+
+        input{
+            padding: 5px;
+        }
+}
+
+.lista-cursos{
+    margin: 20px;
+}
+
+.titulo{
+    margin: 20px;
+}
+
+#cursos{
+    .curso{
+        li{
+            list-style: none;
+        }
+    }
+}

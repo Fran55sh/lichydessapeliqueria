@@ -1,47 +1,30 @@
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100vw;
   position: relative;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 header .line {
   width: 100%;
   height: 2.5px;
-  background: -webkit-gradient(linear, left top, right top, from(#BF953F), color-stop(#FCF6BA), color-stop(#B38728), color-stop(#FBF5B7), to(#AA771C));
   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
-
 header nav {
   width: 100%;
   height: 100%;
 }
-
 header nav ul {
   padding: 20px 0 20px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 0;
   text-align: center;
 }
-
 header nav ul li {
   padding: 0 50px 0 50px;
   list-style: none;
 }
-
 header nav ul li a {
   font-size: 1.4rem;
   text-decoration: none;
@@ -50,36 +33,23 @@ header nav ul li a {
 aside {
   padding: 0 30px 0 0px;
   max-width: 30vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   margin: 50px;
 }
-
 aside .login {
   display: block;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: auto;
   margin-top: 50px;
 }
-
 aside .login .imgcontainer {
   text-align: center;
 }
-
 aside .login .imgcontainer .svg {
   width: 20%;
 }
-
 aside .login .form input:-webkit-autofill,
 aside .login .form input:-webkit-autofill:hover,
 aside .login .form input:-webkit-autofill:focus,
@@ -96,7 +66,6 @@ aside .login .form select:-webkit-autofill:focus {
   transition: background-color 5000000000s ease-in-out 0s;
   font-family: "Montserrat";
 }
-
 aside .login .form input {
   background-color: transparent;
   border-style: none;
@@ -106,71 +75,49 @@ aside .login .form input {
   color: black;
   width: 100%;
 }
-
 aside .login .form input:focus {
   outline: none;
 }
-
 aside .login .form input:active {
   background-color: none;
 }
-
-aside .login ::-webkit-input-placeholder {
+aside .login ::-moz-placeholder {
   padding-bottom: 0;
   font-family: "Montserrat";
   font-size: 1.3rem;
   color: black;
 }
-
 aside .login :-ms-input-placeholder {
   padding-bottom: 0;
   font-family: "Montserrat";
   font-size: 1.3rem;
   color: black;
 }
-
-aside .login ::-ms-input-placeholder {
-  padding-bottom: 0;
-  font-family: "Montserrat";
-  font-size: 1.3rem;
-  color: black;
-}
-
 aside .login ::placeholder {
   padding-bottom: 0;
   font-family: "Montserrat";
   font-size: 1.3rem;
   color: black;
 }
-
 aside .login .line {
   width: 100%;
   height: 1px;
-  background: -webkit-gradient(linear, left top, right top, from(#BF953F), color-stop(#FCF6BA), color-stop(#B38728), color-stop(#FBF5B7), to(#AA771C));
   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
-
 aside .login .psw {
   padding-top: 5px;
   color: black;
   font-size: 1rem;
   text-align: center;
 }
-
 aside .login .psw a {
   color: black;
 }
-
 aside .signBtn {
   margin: 0 10px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 aside .signBtn button {
   width: 150px;
   padding: 10px 30px 10px 30px;
@@ -181,12 +128,10 @@ aside .signBtn button {
   font-size: 1rem;
   border: solid 1.2px white;
 }
-
 aside .signBtn button:first-child {
   background: #ff97e7;
   border: none;
 }
-
 aside .signBtn button:nth-child(2) {
   background-color: transparent;
 }
@@ -203,27 +148,16 @@ aside .signBtn button:nth-child(2) {
   margin: 0;
   margin-top: 20px;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .contenido-imagenes {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-
 .contenido-imagenes img {
   border-radius: 7px;
   -o-object-fit: cover;
@@ -233,16 +167,10 @@ aside .signBtn button:nth-child(2) {
 }
 
 .texto {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   max-width: 40vw;
 }
-
 .texto .texto-principal {
   text-align: justify;
   font-size: 1.25rem;
@@ -253,8 +181,7 @@ aside .signBtn button:nth-child(2) {
   position: relative;
   width: 100%;
   height: 15vh;
-  margin-bottom: -7px;
-  /*Fix for safari gap*/
+  margin-bottom: -7px; /*Fix for safari gap*/
   min-height: 100px;
   max-height: 150px;
 }
@@ -265,27 +192,16 @@ aside .signBtn button:nth-child(2) {
   min-width: 100vw;
   margin: 0;
 }
-
 .contenido-mobile .texto {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   min-width: 90%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin: 50px;
 }
-
 .contenido-mobile .texto .contenido-imagenes-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .contenido-mobile .texto .contenido-imagenes-mobile img {
   border-radius: 7px;
   -o-object-fit: cover;
@@ -293,7 +209,6 @@ aside .signBtn button:nth-child(2) {
   width: 30%;
   height: auto;
 }
-
 .contenido-mobile .texto .texto-principal {
   text-align: justify;
   font-size: 1.25rem;
@@ -303,14 +218,9 @@ aside .signBtn button:nth-child(2) {
 .footer {
   padding: 5px 0 30px 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
-
 .footer svg {
   width: 30px;
 }
@@ -351,26 +261,21 @@ aside .signBtn button:nth-child(2) {
 
 @-webkit-keyframes move-forever {
   0% {
-    -webkit-transform: translate3d(-90px, 0, 0);
-            transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(85px, 0, 0);
-            transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
   }
 }
 
 @keyframes move-forever {
   0% {
-    -webkit-transform: translate3d(-90px, 0, 0);
-            transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
   }
   100% {
-    -webkit-transform: translate3d(85px, 0, 0);
-            transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
   }
 }
-
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
@@ -381,7 +286,6 @@ aside .signBtn button:nth-child(2) {
     height: 30vh;
   }
 }
-
 @media (max-width: 900px) {
   .contenido-mobile {
     display: block;
@@ -405,13 +309,8 @@ aside .signBtn button:nth-child(2) {
     max-width: 100%;
   }
   .form .signBtn {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .form .signBtn .login-btn {
     margin-bottom: 5px;
@@ -420,17 +319,15 @@ aside .signBtn button:nth-child(2) {
     margin-top: 10px;
   }
 }
-
 .card {
   display: inline-block;
   position: relative;
-  width: calc(100% * (1/5) - 10px - 1px);
+  width: calc(20% - 10px - 1px);
   min-width: 350px;
   height: 490px;
   border-radius: 30px;
   overflow: hidden;
-  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
-          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
   margin: 30px;
 }
 
@@ -438,12 +335,10 @@ aside .signBtn button:nth-child(2) {
   position: absolute;
   width: 100%;
   background-color: #ffa1a1;
-  -webkit-transform: blu;
-          transform: blu;
+  transform: blu;
   height: 100%;
   bottom: 25%;
-  -webkit-filter: blur(215px);
-          filter: blur(215px);
+  filter: blur(215px);
 }
 
 #btnCompra {
@@ -475,8 +370,7 @@ aside .signBtn button:nth-child(2) {
   bottom: 30%;
   left: 30px;
   overflow: hidden;
-  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
-          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.7);
 }
 
 .hero-logo img {
@@ -494,8 +388,7 @@ aside .signBtn button:nth-child(2) {
   margin: auto;
   right: 50%;
   text-align: justify;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
 }
 
 .hero-btn {
@@ -537,60 +430,37 @@ aside .signBtn button:nth-child(2) {
 }
 
 .cursos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .contenido {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: column;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   height: 80vh;
 }
 
 .mis_cursos_body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffbdd1), to(#ffbdd1));
-  background: linear-gradient(180deg, #ffbdd1 0%, #ffbdd1 100%);
+  background: linear-gradient(312deg, #ffcbdb 0%, #fa6691 100%);
+  background-size: cover;
 }
 
 .curso_card {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: 10px;
   width: 100%;
 }
-
 .curso_card .curso_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .curso_card .curso_container video {
   height: 100%;
   -o-object-fit: fill;
@@ -601,14 +471,37 @@ aside .signBtn button:nth-child(2) {
   margin-top: 20px !important;
 }
 
+.form-nuevo-curso div {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-left: 20px;
+}
+.form-nuevo-curso label {
+  margin: 5px;
+}
+.form-nuevo-curso input {
+  padding: 5px;
+}
+
+.lista-cursos {
+  margin: 20px;
+}
+
+.titulo {
+  margin: 20px;
+}
+
+#cursos .curso li {
+  list-style: none;
+}
+
 body {
   width: 100vw;
   height: 100vh;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Montserrat";
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
