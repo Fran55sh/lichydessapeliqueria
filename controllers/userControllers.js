@@ -1,6 +1,5 @@
 require("dotenv").config();
-const user = require("../models/User");
-const jwt = require('jsonwebtoken')
+const userModel = require("../models/User");
 const userHasCursos = require("../models/UserHasCursos")
 
 
@@ -16,7 +15,7 @@ const signToken = (userID, user, role) => {
         sub: userID,
       },
       process.env.JWT_SECRET,
-      { expiresIn: "1h" }
+      { expiresIn: "2h" }
     );
   };
 
@@ -24,7 +23,7 @@ class Users {
   static async signIn(req, res) {
     const { username, password, role } = req.body;
     console.log(username, password, role);
-    user.findOne({ username }, (err, user) => {
+    userModel.findOne({ username }, (err, user) => {
       if (err)
         res
           .status(500)
@@ -36,14 +35,21 @@ class Users {
             message: { msgBody: "Username is already taken", msgError: true },
           });
       else {
-        const newUser = new user({ username, password, role });
-        newUser.save((err) => {
-          if (err)
-            res
-              .status(500)
-              .json({ message: { msgBody: username, msgError: true } });
-          else res.redirect("/");
-        });
+
+        try {
+          const newUser = new userModel({username, password, role})
+          newUser.save(function (err) {
+            if (err) return handleError(err);
+            // saved!
+          });
+          res.redirect("/");
+          
+        } catch (error) {
+          res.status(400).json({
+            msg:"aca"
+          })
+        }
+        
       }
     });
   }
