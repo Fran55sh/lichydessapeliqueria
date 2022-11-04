@@ -492,8 +492,27 @@ aside .signBtn button:nth-child(2) {
   margin: 20px;
 }
 
+#cursos {
+  display: flex;
+}
+#cursos .curso {
+  margin: 20px;
+}
 #cursos .curso li {
   list-style: none;
+}
+#cursos .curso li.descripcion-listas-cursos {
+  margin: 5px 0;
+}
+#cursos .curso button {
+  margin: 5px 0;
+}
+#cursos .thumbnail-listas-cursos {
+  aspect-ratio: 16/9;
+  max-width: 100%;
+  max-height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body {
