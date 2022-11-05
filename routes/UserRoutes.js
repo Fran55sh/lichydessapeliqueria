@@ -7,7 +7,11 @@ const ensureAuth = require('../middlewares/auth')
 
 
 router.get("/", (req, res) => {
-  res.render("index");
+  const error = req.flash('error')[0]
+  console.log(error)
+  res.render("index",{
+    error
+  });
 });
 
 router.get("/misCursos", (req, res) => {
@@ -16,7 +20,7 @@ router.get("/misCursos", (req, res) => {
 
 router.post("/signup", userController.signIn);
 
-router.post("/login", passport.authenticate("local", { session: false }),userController.logIn,),
+router.post("/login", passport.authenticate("local", { session: false, failureRedirect: "/", failureFlash: true }),userController.logIn,),
 
 router.get("/logout", passport.authenticate("jwt", { session: false }),userController.logOut);
 

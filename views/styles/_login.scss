@@ -328,3 +328,12 @@ aside {
   }
 
 }
+
+
+.toast{
+  position: relative;
+
+  .alert {
+    position: absolute;
+  }
+}

@@ -22,18 +22,15 @@ const signToken = (userID, user, role) => {
 class Users {
   static async signIn(req, res) {
     const { username, password, role } = req.body;
-    console.log(username, password, role);
     userModel.findOne({ username }, (err, user) => {
       if (err)
         res
           .status(500)
           .json({ message: { msgBody: "database error", msgError: true } });
-      if (user)
-        res
-          .status(400)
-          .json({
-            message: { msgBody: "Username is already taken", msgError: true },
-          });
+      if (user){
+        req.flash('error', 'El usuario ya existe')
+        res.redirect('/')
+      }
       else {
 
         try {
@@ -42,11 +39,13 @@ class Users {
             if (err) return handleError(err);
             // saved!
           });
-          res.redirect("/");
+          res.render("index", {
+            succes_msg:"Usuario creado con exito!"
+          });
           
         } catch (error) {
           res.status(400).json({
-            msg:"aca"
+            msg:error
           })
         }
         
@@ -55,7 +54,12 @@ class Users {
   }
 
   static async logIn(req, res) {
-    if (req.isAuthenticated()) {
+    if (!req.isAuthenticated()) {
+      req.flash('error', 'Ususario o contraseña incorrectos')
+      console.log("que onda perro")
+      res.redirect("/")
+      
+    }else{
       const { _id, username, role } = req.user;
       console.log(_id.toString())
       const token = signToken(_id, username, role);
@@ -78,15 +82,7 @@ class Users {
     }
     
     
-  // static async authenticate(req, res){
-  //   const user = req.user;
 
-  //   if (user.role === "admin") {
-  //     res.render("admin");
-  //   } else {
-  //     res.render("profile");
-  //   }
-  // }
   
   static async logOut(req, res) {
     res.clearCookie("access_token");

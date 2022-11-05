@@ -109,7 +109,7 @@ class Cursos {
           precio,
           thumbnail,
         });
-        res.redirect('api/authenticated')
+        res.render('admin')
       } catch (error) {
         return res.status(500).json({
           status: 500,

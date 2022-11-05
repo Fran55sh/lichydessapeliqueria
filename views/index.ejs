@@ -12,13 +12,16 @@
   <title>Document</title>
 </head>
 
+
 <body>
 
+
+     
   <div class="header">
     <header>
       <nav class="nav">
         <ul>
-          <li><a href="/api/authenticated">Inicio</a> </li>
+          <li><a href="/">Inicio</a> </li>
           <li><a href="">Contacto</a></li>
         </ul>
       </nav>
@@ -53,8 +56,19 @@
               <button class="signin-btn" type="submit" formaction="signup" >
                 <div class="wrap">Sign In
               </button>
+
             </div>
           </div>
+          <% if (success) { %>
+            <div class="alert success">
+              <p><%= success %> </p>
+            </div>
+            <% } %>
+            <% if (error) { %>
+             <div class="alert error">
+              <p><%= error %> </p>
+             </div>
+            <% } %>
         </form>
       </aside>
 
@@ -102,9 +116,9 @@ Hoy los invito a que puedan disfrutar de esta experiencia nueva.<br> El saber no
     <div class="contenido-mobile">
       <div class="texto">
         <div class="contenido-imagenes-mobile">
-          <img src="../assets/530329.webp" alt="">
-          <img src="../assets/como_poner_precios_en_una_peluqueria_48499_600.jpg" alt="">
-          <img src="../assets/images.jpg" alt="">
+          <img src="./assets/balayajeCompleto_Moment.jpg" alt="">
+          <img src="./assets/balayajeCompleto_Moment.jpg" alt="">
+          <img src="./assets/balayajeCompleto_Moment.jpg" alt="">
         </div>
   
   

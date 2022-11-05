@@ -319,6 +319,13 @@ aside .signBtn button:nth-child(2) {
     margin-top: 10px;
   }
 }
+.toast {
+  position: relative;
+}
+.toast .alert {
+  position: absolute;
+}
+
 .card {
   display: inline-block;
   position: relative;
