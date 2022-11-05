@@ -66,13 +66,13 @@ class Users {
 
       if (role === "admin") {
 
-        res.redirect('/api/authenticated');
+        res.render('admin');
         res.status({
           status:200,
           msg: token
         })
       } else {
-        res.redirect("/api/profile");
+        res.render("profile");
       }
     }
     }
