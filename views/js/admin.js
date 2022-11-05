@@ -37,7 +37,7 @@ function renderCursos(data) {
     newElement.classList.add("curso");
     newElement.innerHTML = `
         <li> Nombre: ${cursos.nombre}</li>
-        <img class="thumbnail-listas-cursos" src="/views${cursos.thumbnail.slice(1)}" alt="">
+        <img class="thumbnail-listas-cursos" src="${cursos.thumbnail}" alt="">
         <li class="descripcion-listas-cursos"> Descripcion <br>${cursos.descripcion}</li>
         <li> Precio: ${cursos.precio}</li>
 
