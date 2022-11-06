@@ -3,7 +3,7 @@
   
   
   async function getCourses() {
-    await fetch("http://localhost:3000/api/users/cursos")
+    await fetch("api/users/cursos")
       .then((response) => response.json())
       .then((data) => showCursos(data));
   }

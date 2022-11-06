@@ -13,7 +13,7 @@ class PaymentService {
       back_urls: {
         failure: "/failure",
         pending: "/pending",
-        success: `localhost:3000/cursos/add/${items[0].id}`
+        success: `/cursos/add/${items[0].id}`
       }
     };
 

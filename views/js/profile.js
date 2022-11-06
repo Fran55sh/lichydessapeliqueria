@@ -2,7 +2,7 @@
 const cursos = document.getElementById("cursos");
 
 async function getCourses() {
-  await fetch("/api/cursos")
+  await fetch("api/cursos")
     .then((response) => response.json())
     .then((data) => renderCard(data));
 }
@@ -12,7 +12,7 @@ getCourses();
 async function payment(param) {
 
   async function getCursoById() {
-    await fetch(`/api/cursos/${param}`)
+    await fetch(`api/cursos/${param}`)
       .then((response) => response.json())
       .then((data) => makePayment(data));
   }
@@ -37,7 +37,7 @@ async function payment(param) {
       body: raw,
     };
   
-    fetch("http://localhost:3000/payment", requestOptions)
+    fetch("payment", requestOptions)
       .then((response) => response.json())
       .then((result) => (window.location.href = result.init_point))
       .catch((error) => console.log("error", error));
