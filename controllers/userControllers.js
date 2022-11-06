@@ -1,6 +1,7 @@
 require("dotenv").config();
 const userModel = require("../models/User");
 const userHasCursos = require("../models/UserHasCursos")
+const session = require('express-session')
 
 
 const JWT = require("jsonwebtoken");
@@ -55,8 +56,8 @@ class Users {
 
   static async logIn(req, res) {
     if (!req.isAuthenticated()) {
-      req.flash('error', 'Ususario o contraseña incorrectos')
-      console.log("que onda perro")
+      
+
       res.redirect("/")
       
     }else{
@@ -66,11 +67,13 @@ class Users {
       
       res.cookie("access_token", token, { httpOnly: true, sameSite: true });
       res.cookie("userId", _id.toString(), { httpOnly: true, sameSite: true });
-      //    res.status(200).json({isAuthenticated : true,user : {username,role}});
+      const sessionId = req.session
+      sessionId.globalUserId = req.cookies.userId
 
       if (role === "admin") {
 
         res.render('admin');
+
         res.status({
           status:200,
           msg: token
@@ -114,7 +117,6 @@ class Users {
   static async getUserCourses(req, res) {
     try {
 
-      let access_token = req.cookies.access_token
       const userId = req.cookies.userId
       
       const user = await userHasCursos.find({userId: userId}).populate('cursoId');

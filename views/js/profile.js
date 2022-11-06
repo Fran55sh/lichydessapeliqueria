@@ -12,7 +12,7 @@ getCourses();
 async function payment(param) {
 
   async function getCursoById() {
-    await fetch(`api/cursos/${param}`)
+    await fetch(`/api/cursos/${param}`)
       .then((response) => response.json())
       .then((data) => makePayment(data));
   }
@@ -27,7 +27,7 @@ async function payment(param) {
       id: curso.data._id,
       title: curso.data.nombre,
       description: curso.data.descripcion,
-      picture_url: "utl test",
+      picture_url: "test",
       unit_price: curso.data.precio,
     });
   
@@ -37,7 +37,7 @@ async function payment(param) {
       body: raw,
     };
   
-    fetch("payment", requestOptions)
+    fetch("/payment", requestOptions)
       .then((response) => response.json())
       .then((result) => (window.location.href = result.init_point))
       .catch((error) => console.log("error", error));

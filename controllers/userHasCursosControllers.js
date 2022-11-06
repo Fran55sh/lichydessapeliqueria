@@ -3,6 +3,8 @@ const userHasCursos = require("../models/UserHasCursos");
 const cursoModel = require("../models/Cursos");
 const userModel = require("../models/User");
 const jwt = require("jsonwebtoken");
+const global = require('./userControllers')
+const session = require('express-session')
 
 class addCursos {
   /**
@@ -20,13 +22,15 @@ class addCursos {
    *             "userId": {
    */
   static async postCursoToUser(req, res) {
+    const sessionId = req.session
+    console.log (`global post user${sessionId.globalUserId} `) 
     try {
-      
       const cursoId = req.params.curso;
-      const userId = req.cookies.userId
+      const userId = sessionId.globalUserId
+      console.log(`tiene que estar el ${userId}`)
 
-      console.log(cursoId)
-      console.log(userId)
+      // console.log(cursoId)
+      // console.log(userId)
       if (!cursoId) {
         return res.status(404).json({
           status: 404,
@@ -38,11 +42,11 @@ class addCursos {
         userId,
         cursoId,
       });
-      return res.status(201).json({
-        status: 201,
-        message: `curso agregado`,
-      });
+      res.redirect('/misCursos')
+     
     } catch (error) {
+      console.log("Failed to post curso to user")
+      res.redirect('/')
       return res.status(500).json({
         status: 500,
         error: error,

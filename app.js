@@ -31,8 +31,8 @@ app.use(flash());
 
 
 app.use((req, res, next) =>{
-    // res.locals.success_msg = req.flash('success_msg');
     res.locals.success = (req.flash('success')[0])
+    res.locals.globslUserId = (req.cookies.userId)
     next();
 })
 
