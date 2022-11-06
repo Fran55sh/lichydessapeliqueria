@@ -12,7 +12,7 @@ class PaymentService {
       back_urls: {
         failure: "/failure",
         pending: "/pending",
-        success: `/cursos/add/${items[0].id}`,
+        success: `http://168.181.185.201/cursos/add/${items[0].id}`,
       }
     };
 
