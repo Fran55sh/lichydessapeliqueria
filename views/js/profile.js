@@ -55,7 +55,7 @@ function renderCard(array) {
     newElement.innerHTML = `
           <div >
           
-          <img class="hero-profile-img" src="${curso.thumbnail.slice(9)}" alt="">
+          <img class="hero-profile-img" src="./${curso.thumbnail.slice(9)}" alt="">
           </div>
           
           <div class="hero-description-bk"></div>
