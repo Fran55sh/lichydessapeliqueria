@@ -4,7 +4,6 @@ const router = express.Router();
 
 router.get("/", (req, res) => {
   const error = req.flash("error")[0];
-  console.log(error);
   res.render("index", {
     error,
   });
