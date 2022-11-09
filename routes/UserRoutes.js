@@ -5,21 +5,6 @@ const passportConfig = require("../passport");
 const userController = require("../controllers/userControllers");
 const ensureAuth = require("../middlewares/auth");
 
-router.get("/", (req, res) => {
-  const error = req.flash("error")[0];
-  console.log(error);
-  res.render("index", {
-    error,
-  });
-});
-
-router.get("/misCursos", (req, res) => {
-  res.render("misCursos");
-});
-
-router.get("/contacto", (req, res) => {
-  res.render("contacto");
-});
 
 router.post("/signup", userController.signIn);
 
