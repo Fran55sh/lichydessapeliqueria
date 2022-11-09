@@ -12,11 +12,11 @@ const UserHasCursosSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId, 
         ref: "Cursos"
     },
-    // createdAt:{
-    //     type: Date, 
-    //     default: Date.now,
-    //     // expires: 3600
-    // }
+    createdAt:{
+        type: Date, 
+        default: Date.now,
+        expires: 60*60*24*15
+    }
 
 
 })

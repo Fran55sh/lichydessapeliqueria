@@ -4,6 +4,7 @@
 @import './profile';
 @import './misCursos';
 @import './admin';
+@import './contacto';
 
 body{
     width: 100vw;
@@ -13,4 +14,13 @@ body{
     box-sizing: border-box;
     overflow-x: hidden; 
     font-family: $primary-font-style;
+
+    a:link {
+        color: black;
+    }
+
+    a:visited{
+        color: black;
+    }
+
 }

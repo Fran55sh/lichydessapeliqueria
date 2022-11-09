@@ -2,8 +2,6 @@ require("dotenv").config();
 const userHasCursos = require("../models/UserHasCursos");
 const cursoModel = require("../models/Cursos");
 const userModel = require("../models/User");
-const jwt = require("jsonwebtoken");
-const global = require('./userControllers')
 const session = require('express-session')
 
 class addCursos {
@@ -21,16 +19,13 @@ class addCursos {
    *         "errors": {
    *             "userId": {
    */
+
   static async postCursoToUser(req, res) {
-    const sessionId = req.session
-    console.log (`global post user${sessionId.globalUserId} `) 
+    const sessionId = req.session ;
     try {
       const cursoId = req.params.curso;
       const userId = sessionId.globalUserId
-      console.log(`tiene que estar el ${userId}`)
 
-      // console.log(cursoId)
-      // console.log(userId)
       if (!cursoId) {
         return res.status(404).json({
           status: 404,

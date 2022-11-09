@@ -8,14 +8,15 @@
 
 <body>
 
-
-     
   <div class="header">
     <header>
       <nav class="nav">
         <ul>
           <li><a href="/">Inicio</a> </li>
-          <li><a href="">Contacto</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <% if (globslUserId) { %>
+            <li><a href="/misCursos">Mis Cursos</a></li>
+          <% } %>
         </ul>
       </nav>
       <div class="line"></div>
@@ -28,7 +29,7 @@
 
         <div class="toast"></div>
 
-            <form class="login" method="POST" >
+        <form class="login" method="POST">
 
           <div class="imgcontainer">
             <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -37,45 +38,53 @@
             </svg>
           </div>
 
-          <div class="form"  >
+          <div class="form">
             <input type="email" autocomplete="off" placeholder="Email" name="username" required />
             <div class="line"></div>
             <input type="password" placeholder="Contraseña" name="password" required />
             <div class="line"></div>
-            <span style="display: block; " class="psw">Forgot <a href="#">password?</a></span>
 
             <div class="signBtn">
-              <button class="login-btn" type="submit" formaction="login">Log in</button>
-              <button class="signin-btn" type="submit" formaction="signup" >
-                <div class="wrap">Sign In
+              <button class="login-btn" type="submit" formaction="/login">Ingresar</button>
+              <button class="signin-btn" type="submit" formaction="/signup">
+                <div class="wrap">Registrarse
               </button>
 
             </div>
           </div>
+
+          <!-- Muestra mensajes de error o exito dependiendo delinput del usuario  -->
+
           <% if (success) { %>
             <div class="alert success">
-              <p><%= success %> </p>
+              <p>
+                <%= success %>
+              </p>
             </div>
             <% } %>
-            <% if (error) { %>
-             <div class="alert error">
-              <p><%= error %> </p>
-             </div>
-            <% } %>
+              <% if (error) { %>
+                <div class="alert error">
+                  <p>
+                    <%= error %>
+                  </p>
+                </div>
+                <% } %>
         </form>
       </aside>
-      
+
       <div class="texto">
         <div class="contenido-imagenes">
-          <img src="./logo.png" alt="">
+          <img src="./logo.png" alt="logo lichy dessa">
 
         </div>
 
 
         <h1 class="titulo">Lichy Dessa Hair Studio</h1>
         <p class="texto-principal">
-          Hola!! Me presento soy Lichy; pofesional hace 15 años. <br> A lo largo de esta profesión entendí que uno nunca deja de aprender, por que todo los días se renuevan las tendencias.  
-Hoy los invito a que puedan disfrutar de esta experiencia nueva.<br> El saber no ocupa lugar y mientas más conocimiento tengamos, más fácil sera ofrecer nuestro servicio!
+          Hola!! Me presento soy Lichy; pofesional hace 15 años. <br> A lo largo de esta profesión entendí que uno nunca
+          deja de aprender, por que todo los días se renuevan las tendencias.
+          Hoy los invito a que puedan disfrutar de esta experiencia nueva.<br> El saber no ocupa lugar y mientas más
+          conocimiento tengamos, más fácil sera ofrecer nuestro servicio!
         </p>
       </div>
 
@@ -104,6 +113,7 @@ Hoy los invito a que puedan disfrutar de esta experiencia nueva.<br> El saber no
 
   <main>
 
+    <!-- contenido que se muestra solo en mobile -->
     <div class="contenido-mobile">
       <div class="texto">
         <div class="contenido-imagenes-mobile">
@@ -111,21 +121,25 @@ Hoy los invito a que puedan disfrutar de esta experiencia nueva.<br> El saber no
           <img src="./assets/balayajeCompleto_Moment.jpg" alt="">
           <img src="./assets/balayajeCompleto_Moment.jpg" alt="">
         </div>
-  
-  
-        <h1 class="titulo">Cursos Videos Online</h1>
+
+
+        <h1 class="titulo">Lichy Dessa Hair Studio</h1>
         <p class="texto-principal">
-          Hola!! Me presento soy Lichy; pofesional hace 15 años. <br> A lo largo de esta profesión entendí que uno nunca deja de aprender, por que todo los días se renuevan las tendencias.  
-Hoy los invito a que puedan disfrutar de esta experiencia nueva.<br> El saber no ocupa lugar y mientas más conocimiento tengamos, más fácil sera ofrecer nuestro servicio!
+          Hola!! Me presento soy Lichy; pofesional hace 15 años. <br> A lo largo de esta profesión entendí que uno nunca
+          deja de aprender, por que todo los días se renuevan las tendencias.
+          Hoy los invito a que puedan disfrutar de esta experiencia nueva.<br> El saber no ocupa lugar y mientas más
+          conocimiento tengamos, más fácil sera ofrecer nuestro servicio!
         </p>
       </div>
-  
+
+
+      <!-- contenido que se muestra solo en mobile -->
     </div>
-  
+
     <footer class="footer">
-  
+
       <%- include('partials/_footer.ejs') %>
-  
+
     </footer>
 
 

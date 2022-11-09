@@ -449,6 +449,10 @@ aside .signBtn button:nth-child(2) {
   height: 80vh;
 }
 
+.duracion-curso {
+  font-size: 0.8rem;
+}
+
 .mis_cursos_body {
   background-image: url("../bg.jpg");
   background-size: cover;
@@ -526,6 +530,56 @@ aside .signBtn button:nth-child(2) {
      object-fit: cover;
 }
 
+.body-contacto {
+  background: linear-gradient(312deg, #ffcbdb 0%, #fa6691 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.body-contacto .contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.body-contacto .contacto .formulario {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+.body-contacto .contacto .formulario input,
+.body-contacto .contacto .formulario textarea {
+  font-size: large;
+  font-family: "Montserrat";
+  padding: 5px;
+  margin: 0 0 10px 0;
+  background-color: transparent;
+  border-style: none;
+}
+.body-contacto .contacto .formulario textarea {
+  margin-bottom: 0;
+}
+.body-contacto .contacto .formulario input:focus,
+.body-contacto .contacto .formulario textarea:focus {
+  outline: none;
+}
+.body-contacto .contacto .formulario .btnMensaje {
+  width: 150px;
+  padding: 10px 30px 10px 30px;
+  margin: 20px;
+  border-radius: 30px;
+  color: black;
+  font-family: "Montserrat";
+  font-size: 1rem;
+  border: solid 1.2px white;
+  background-color: transparent;
+}
+.body-contacto .line2 {
+  width: 90%;
+  height: 2px;
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
 body {
   width: 100vw;
   height: 100vh;
@@ -534,4 +588,10 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Montserrat";
+}
+body a:link {
+  color: black;
+}
+body a:visited {
+  color: black;
 }/*# sourceMappingURL=style.css.map */
