@@ -6,6 +6,7 @@ const upload = require('express-fileupload')
 const flash = require('connect-flash');
 const session = require('express-session')
 
+const pagesRouter = require('./routes/pagesRoutes')
 const userRouter = require('./routes/UserRoutes');
 const cursoRouter = require('./routes/cursosRoutes')
 const paymentRoutes = require('./routes/paymentsRoutes')
@@ -36,6 +37,7 @@ app.use((req, res, next) =>{
     next();
 })
 
+app.use(pagesRouter)
 app.use(userRouter);
 app.use(cursoRouter)
 app.use(videoroutes)
