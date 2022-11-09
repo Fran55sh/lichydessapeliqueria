@@ -14,7 +14,7 @@ router.get("/misCursos", (req, res) => {
 });
 
 router.get("/contacto", (req, res) => {
-  res.send("prueba");
+  res.render("contacto");
 });
 
 module.exports = router;
