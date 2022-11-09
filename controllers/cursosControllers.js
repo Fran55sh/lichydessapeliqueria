@@ -176,7 +176,7 @@ class Cursos {
   static async addCursoToUser(req, res) {
     try {
       let params = req.params.curso
-      let userId = req.cookies.userId
+      let userId = userID
       
       const curso = await cursoModel.findOne({nombre : params});
       const cursoId = curso._id

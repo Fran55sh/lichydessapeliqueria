@@ -21,7 +21,6 @@ btnListarCursos.addEventListener("click", () => {
       let response = await fetch("api/cursos", { mode: "no-cors" });
       const cursos = await response.json();
       renderCursos(cursos);
-      console.log(cursos);
     } catch (a) {
       console.log(a);
     }
@@ -30,7 +29,6 @@ btnListarCursos.addEventListener("click", () => {
 });
 
 function renderCursos(data) {
-  console.log(data.data);
   data.data.forEach((cursos) => {
     console.log(cursos);
     newElement = document.createElement("div");

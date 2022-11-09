@@ -478,6 +478,10 @@ aside .signBtn button:nth-child(2) {
   margin-top: 20px !important;
 }
 
+#videoPlayer {
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+}
+
 .form-nuevo-curso div {
   display: flex;
   flex-direction: column;
