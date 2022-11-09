@@ -293,7 +293,7 @@ aside .signBtn button:nth-child(2) {
   .contenido-mobile .texto {
     margin: auto;
   }
-  .texto, nav {
+  .texto {
     display: none;
   }
   .inner-header {
@@ -450,7 +450,7 @@ aside .signBtn button:nth-child(2) {
 }
 
 .mis_cursos_body {
-  background: linear-gradient(312deg, #ffcbdb 0%, #fa6691 100%);
+  background-image: url("../bg.jpg");
   background-size: cover;
 }
 
