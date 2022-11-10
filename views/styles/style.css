@@ -547,8 +547,29 @@ aside .signBtn button:nth-child(2) {
   flex-wrap: wrap;
   width: 50%;
 }
+.body-contacto .contacto .formulario input:-webkit-autofill,
+.body-contacto .contacto .formulario input:-webkit-autofill:hover,
+.body-contacto .contacto .formulario input:-webkit-autofill:focus,
+.body-contacto .contacto .formulario textarea:-webkit-autofill,
+.body-contacto .contacto .formulario textarea:-webkit-autofill:hover,
+.body-contacto .contacto .formulario textarea:-webkit-autofill:focus,
+.body-contacto .contacto .formulario select:-webkit-autofill,
+.body-contacto .contacto .formulario select:-webkit-autofill:hover,
+.body-contacto .contacto .formulario select:-webkit-autofill:focus {
+  background: transparent;
+  border: 1px solid transparent;
+  -webkit-text-fill-color: black;
+  -webkit-transition: background-color 5000000000s ease-in-out 0s;
+  transition: background-color 5000000000s ease-in-out 0s;
+  font-family: "Montserrat";
+}
+.body-contacto .contacto .formulario {
+  background-color: rgba(255, 255, 255, 0.5);
+  filter: blur(4px);
+}
 .body-contacto .contacto .formulario input,
 .body-contacto .contacto .formulario textarea {
+  z-index: 5;
   font-size: large;
   font-family: "Montserrat";
   padding: 5px;
