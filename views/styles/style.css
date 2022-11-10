@@ -563,10 +563,6 @@ aside .signBtn button:nth-child(2) {
   transition: background-color 5000000000s ease-in-out 0s;
   font-family: "Montserrat";
 }
-.body-contacto .contacto .formulario {
-  background-color: rgba(255, 255, 255, 0.5);
-  filter: blur(4px);
-}
 .body-contacto .contacto .formulario input,
 .body-contacto .contacto .formulario textarea {
   z-index: 5;
@@ -601,6 +597,12 @@ aside .signBtn button:nth-child(2) {
   background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
+@media (max-width: 900px) {
+  .formulario {
+    display: flex;
+    flex-direction: row;
+  }
+}
 body {
   width: 100vw;
   height: 100vh;

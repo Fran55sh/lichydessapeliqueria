@@ -32,9 +32,7 @@
     }
     
     .formulario{
-      background-color: rgba($color: #ffffff, $alpha: 0.5);
-      filter: blur(4px);
-      
+
       input,
       textarea {
         z-index: 5;
@@ -77,3 +75,10 @@
       }
     }
   
+    @media (max-width: 900px) {
+      .formulario{
+
+        display: flex;
+        flex-direction: row;
+      }
+    }
