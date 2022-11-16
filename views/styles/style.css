@@ -598,9 +598,15 @@ aside .signBtn button:nth-child(2) {
 }
 
 @media (max-width: 900px) {
-  .formulario {
+  .body-contacto .contacto {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  iframe {
+    width: 90%;
+    max-height: 200px;
   }
 }
 body {
