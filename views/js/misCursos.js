@@ -18,7 +18,7 @@
       newElement.innerHTML = `
             <div class="curso_container">
             <h2>${curso.cursoId.nombre}</h2>
-            <video id="videoPlayer" width="50%" controls muted="muted" poster="/assets/1.jpg" oncontextmenu="return false;" controlsList="nodownload">
+            <video id="videoPlayer" width="50%" controls muted="muted" poster="${curso.cursoId.thumbnail.slice(9)}" oncontextmenu="return false;" controlsList="nodownload">
               <source src="/assets/${curso.cursoId.filePath.slice(9)}" type="video/mp4" />
             </video>
             </div>
