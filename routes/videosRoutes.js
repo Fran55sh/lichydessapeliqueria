@@ -106,6 +106,7 @@ router.get("/video/:id", async function  (req, res) {
             res.statusCode = start !== undefined || end !== undefined ? 206 : 200;
 
             res.setHeader("content-length", retrievedLength);
+            res.setHeader("Connection", keep-alive)
 
             if (range !== undefined) {  
                 res.setHeader("content-range", `bytes ${start || 0}-${end || (contentLength-1)}/${contentLength}`);
