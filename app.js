@@ -30,9 +30,9 @@ app.use(session({
 }))
 app.use(flash());
 
-
 app.use((req, res, next) =>{
     res.locals.success = (req.flash('success')[0])
+    res.locals.error = ""
     res.locals.globslUserId = (req.cookies.userId)
     next();
 })

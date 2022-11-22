@@ -3,6 +3,7 @@ const userModel = require("../models/User");
 const userHasCursos = require("../models/UserHasCursos");
 const session = require("express-session");
 
+
 const JWT = require("jsonwebtoken");
 
 const signToken = (userID, user, role) => {
@@ -37,8 +38,8 @@ class Users {
             if (err) return handleError(err);
             // saved!
           });
-          res.render("index", {
-            succes_msg: "Usuario creado con exito!",
+          res.render("profile", {
+            success_msg: "Usuario creado con exito!",
           });
         } catch (error) {
           res.status(400).json({
@@ -88,7 +89,8 @@ class Users {
  */
   static async logOut(req, res) {
     res.clearCookie("access_token");
-    res.json({ user: { username: "", role: "" }, success: true });
+    // res.json({ user: { username: "", role: "" }, success: true });
+    res.redirect("/")
   }
 
 /**

@@ -17,4 +17,8 @@ router.get("/contacto", (req, res) => {
   res.render("contacto");
 });
 
+router.get("/profile", (req, res) => {
+  res.render("profile");
+});
+
 module.exports = router;

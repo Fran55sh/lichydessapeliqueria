@@ -16,8 +16,8 @@
           <% if (globslUserId) { %>
             <li><a href="/misCursos">Mis Cursos</a></li>
             <% } %>
-            <li><a href="/contacto">Contacto</a></li>
-          </ul>
+              <li><a href="/contacto">Contacto</a></li>
+        </ul>
       </nav>
       <div class="line"></div>
     </header>
@@ -61,14 +61,14 @@
                 <%= success %>
               </p>
             </div>
-            <% } %>
-              <% if (error) { %>
-                <div class="alert error">
-                  <p>
-                    <%= error %>
-                  </p>
-                </div>
-                <% } %>
+          <% } %>
+          <% if (error) { %>
+            <div class="alert error">
+              <p>
+                <%= error %>
+              </p>
+            </div>
+          <% } %>
         </form>
       </aside>
 

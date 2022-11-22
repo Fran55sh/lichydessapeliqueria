@@ -452,6 +452,16 @@ aside .signBtn button:nth-child(2) {
   font-size: 0.8rem;
 }
 
+a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a svg {
+  display: block;
+  width: 20px;
+}
+
 .mis_cursos_body {
   background-image: url("../bg.jpg");
   background-size: cover;
