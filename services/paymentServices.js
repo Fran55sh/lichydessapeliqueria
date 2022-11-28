@@ -12,12 +12,13 @@ class PaymentService {
       payment_methods: { 
         excluded_payment_methods: [
             {
-                id: "master"
+                id: ""
             }
         ],
         excluded_payment_types: [
             {
-                id: "ticket"
+                id: "ticket",
+                id: "atm"
             }
         ],
       },
