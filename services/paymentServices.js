@@ -9,6 +9,14 @@ class PaymentService {
     const body = {
       // payer_email: "test_user_93071437@testuser.com",
       items: items,
+      payment_methods: {
+        excluded_payment_types: [
+            {
+                id: "ticket"
+            }
+        ],
+      },
+    
       back_urls: {
         failure: "/failure",
         pending: "/pending",
