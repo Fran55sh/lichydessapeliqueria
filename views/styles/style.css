@@ -161,14 +161,14 @@ aside .signBtn button:nth-child(2) {
   border-radius: 7px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 30%;
+  width: 20%;
   height: auto;
 }
 
 .texto {
   display: flex;
   flex-direction: column;
-  max-width: 40vw;
+  max-width: 45vw;
 }
 .texto .texto-principal {
   text-align: justify;
@@ -291,6 +291,9 @@ aside .signBtn button:nth-child(2) {
   }
   .contenido-mobile .texto {
     margin: auto;
+  }
+  .contenido-imagenes img {
+    width: 150px;
   }
   .texto {
     display: none;

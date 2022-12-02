@@ -173,7 +173,7 @@ aside {
   img {
     border-radius: 7px;
     object-fit: cover;
-    width: 30%;
+    width: 20%;
     height: auto;
   }
 }
@@ -181,7 +181,7 @@ aside {
 .texto {
   display: flex;
   flex-direction: column;
-  max-width: 40vw;
+  max-width: 45vw;
 
   .texto-principal {
     text-align: justify;
@@ -293,6 +293,10 @@ aside {
     .texto{
       margin: auto;
     }
+  }
+
+  .contenido-imagenes img{
+    width: 150px;
   }
   .texto{
     display: none;
