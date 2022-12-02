@@ -2,6 +2,7 @@ require("dotenv").config();
 const userModel = require("../models/User");
 const userHasCursos = require("../models/UserHasCursos");
 const session = require("express-session");
+const flash = require('connect-flash')
 
 
 const JWT = require("jsonwebtoken");
@@ -38,9 +39,8 @@ class Users {
             if (err) return handleError(err);
             // saved!
           });
-          res.render("index", {
-            success_msg: "Usuario creado con exito!",
-          });
+          req.flash("success", "Usuario creado con exito!"),
+          res.redirect("/");
         } catch (error) {
           res.status(400).json({
             msg: error,
@@ -91,7 +91,6 @@ class Users {
   static async logOut(req, res) {
     res.clearCookie("access_token");
     res.clearCookie("userId");
-    sessionId.globalUserId = "";
 
     // res.json({ user: { username: "", role: "" }, success: true });
     res.render("index")

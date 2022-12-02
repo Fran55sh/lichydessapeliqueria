@@ -55,21 +55,21 @@
 
           <!-- Muestra mensajes de error o exito dependiendo delinput del usuario  -->
 
-          <% if (success) { %>
-            <div class="alert success">
-              <p>
-                <%= success %>
-              </p>
-            </div>
-          <% } %>
-          <% if (error) { %>
+          <!-- <% if (error && error.length >0) { %>
             <div class="alert error">
               <p>
                 <%= error %>
               </p>
             </div>
-          <% } %>
-        </form>
+          <% } else if (success && success.length > 0) { %>
+            <% } %> -->
+          </form>
+          <div class="alert error">
+            <p>
+              <%= success %>
+              <%= error %>
+            </p>
+          </div>
       </aside>
 
       <div class="texto">

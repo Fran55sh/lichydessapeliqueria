@@ -6,7 +6,9 @@ const userController = require("../controllers/userControllers");
 const ensureAuth = require("../middlewares/auth");
 
 
-router.post("/signup", userController.signIn);
+router.post("/signup", userController.signIn), function(req, res) {
+  req.flash('success','Usuario Creado con exito en signup!');
+};
 
 router.post(
   "/login",
