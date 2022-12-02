@@ -91,6 +91,8 @@ class Users {
   static async logOut(req, res) {
     res.clearCookie("access_token");
     res.clearCookie("userId");
+    const sessionId = req.session;
+      sessionId.globalUserId = "";
 
     // res.json({ user: { username: "", role: "" }, success: true });
     res.render("index")
