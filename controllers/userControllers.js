@@ -38,7 +38,7 @@ class Users {
             if (err) return handleError(err);
             // saved!
           });
-          res.render("profile", {
+          res.render("index", {
             success_msg: "Usuario creado con exito!",
           });
         } catch (error) {
