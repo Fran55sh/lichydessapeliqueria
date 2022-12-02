@@ -34,9 +34,6 @@ app.use((req, res, next) =>{
     res.locals.success = req.flash('success')
     res.locals.error = ""
     res.locals.globslUserId = (req.cookies.userId)
-    console.log(`session success ${res.locals.success}`)
-    console.log(`session error ${res.locals.error}`)
-    console.log(`session globaluser ${res.locals.globslUserId}`)
     next();
 })
 
