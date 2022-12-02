@@ -68,6 +68,7 @@ class Users {
       res.cookie("userId", _id.toString(), { httpOnly: true, sameSite: true });
       const sessionId = req.session;
       sessionId.globalUserId = req.cookies.userId;
+      console.log(sessionId.globalUserId)
 
       if (role === "admin") {
         res.render("admin");
@@ -90,6 +91,7 @@ class Users {
   static async logOut(req, res) {
     res.clearCookie("access_token");
     res.clearCookie("userId");
+
     // res.json({ user: { username: "", role: "" }, success: true });
     res.redirect("/")
   }
