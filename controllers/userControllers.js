@@ -61,13 +61,12 @@ class Users {
       res.redirect("/");
     } else {
       const { _id, username, role } = req.user;
-      console.log(_id.toString());
       const token = signToken(_id, username, role);
 
       res.cookie("access_token", token, { httpOnly: true, sameSite: true });
       res.cookie("userId", _id.toString(), { httpOnly: true, sameSite: true });
       const sessionId = req.session;
-      sessionId.globalUserId = req.cookies.userId;
+      sessionId.globalUserId = _id.toString();
       console.log(sessionId.globalUserId)
 
       if (role === "admin") {
@@ -91,8 +90,7 @@ class Users {
   static async logOut(req, res) {
     res.clearCookie("access_token");
     res.clearCookie("userId");
-    const sessionId = req.session;
-      sessionId.globalUserId = "";
+    res.locals.golbalUserId = ""
 
     // res.json({ user: { username: "", role: "" }, success: true });
     res.render("index")
