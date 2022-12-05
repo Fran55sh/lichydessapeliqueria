@@ -24,7 +24,10 @@ class addCursos {
     const sessionId = req.session ;
     try {
       const cursoId = req.params.curso;
-      const userId = sessionId.globalUserId
+      const userId = req.params.userId
+
+      console.log(`este es el curso id ${cursoId}`)
+      console.log(`este es el curso id ${userId}`)
 
       if (!cursoId) {
         return res.status(404).json({
@@ -37,10 +40,8 @@ class addCursos {
         userId,
         cursoId,
       });
-   
       res.redirect('/misCursos')
-    
-
+     
     } catch (error) {
       console.log("Failed to post curso to user")
       res.redirect('/')

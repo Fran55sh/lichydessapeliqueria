@@ -33,7 +33,8 @@ app.use(flash());
 app.use((req, res, next) =>{
     res.locals.success = req.flash('success')
     res.locals.error = ""
-    res.locals.golbalUserId = (req.cookies.userId)
+    res.locals.isLoggedIn = (req.cookies.access_token)
+    console.log(`isLoggedInd: ${res.locals.isLoggedIn}`)
     res.locals.globalUserId = req.session.globalUserId
     console.log(`imprime este globaluser${res.locals.globalUserId}`)
     next();
