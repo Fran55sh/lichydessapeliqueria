@@ -12,7 +12,7 @@
 
   function showCursos(array){
     array.data.forEach((curso) => {
-    console.log(curso.cursoId.filePath)
+    console.log(curso.cursoId)
       let newElement = document.createElement("div");
       newElement.classList.add("curso_card");
       newElement.innerHTML = `
