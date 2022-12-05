@@ -19,7 +19,7 @@
             <div class="curso_container">
             <h2>${curso.cursoId.nombre}</h2>
             <video id="videoPlayer" width="50%" controls muted="muted" poster="${curso.cursoId.thumbnail.slice(9)}" oncontextmenu="return false;" controlsList="nodownload">
-              <source src="/assets/${curso.cursoId.filePath.slice(9)}" type="video/mp4" />
+              <source src="/assets/${curso.cursoId.filepath.slice(9)}" type="video/mp4" />
             </video>
             </div>
   
