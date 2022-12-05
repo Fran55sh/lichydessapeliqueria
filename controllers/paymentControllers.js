@@ -20,8 +20,6 @@ class PaymentController {
     */
     async getPaymentLink(req, res) {
       const {id, title, description, picture_url, unit_price} = req.body
-      const userId = req.session.globalUserId
-      console.log(`este es el user id que busco ${userId}`)
       const paymentMethods = { 
         
         excluded_payment_types: [
@@ -43,7 +41,7 @@ class PaymentController {
         
       ]
       try {
-        const payment = await this.subscriptionService.createPayment(items, paymentMethods, userId);
+        const payment = await this.subscriptionService.createPayment(items, paymentMethods);
   
         return res.json(payment);
       } catch (error) {

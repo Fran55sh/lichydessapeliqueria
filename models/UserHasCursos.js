@@ -15,10 +15,10 @@ const UserHasCursosSchema = new mongoose.Schema({
     createdAt:{
         type: Date, 
         default: Date.now,
-        // expires: 180
+        expires: 60*60*24*15
     }
 
 
 })
-UserHasCursosSchema.index({ createdAt: 1 }, { expireAfterSeconds: 60*60*24*15 });
+
 module.exports = mongoose.model('UserHasCursos',UserHasCursosSchema);

@@ -4,9 +4,8 @@ const axios = require("axios");
 
 /* It creates a payment object with the items passed as a parameter and returns the payment object. */
 class PaymentService {
-  async createPayment(items, paymentMethods, userId) {
+  async createPayment(items, paymentMethods) {
     const url = "https://api.mercadopago.com/checkout/preferences";
-    console.log(`fucking got this ${userId}`)
     const body = {
       // payer_email: "test_user_93071437@testuser.com",
       items: items,
@@ -15,7 +14,6 @@ class PaymentService {
       back_urls: {
         failure: "/",
         pending: "/",
-        // success: `http://localhost:3000/api/cursos/add/${items[0].id}/${userId}`,
         success: `https://www.lichydessa.com/api/cursos/add/${items[0].id}/${userId}`,
       }
     };

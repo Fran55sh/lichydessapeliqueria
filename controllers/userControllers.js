@@ -93,7 +93,7 @@ class Users {
     res.locals.golbalUserId = ""
 
     // res.json({ user: { username: "", role: "" }, success: true });
-    res.redirect("/")
+    res.render("index")
   }
 
 /**

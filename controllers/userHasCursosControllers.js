@@ -24,10 +24,7 @@ class addCursos {
     const sessionId = req.session ;
     try {
       const cursoId = req.params.curso;
-      const userId = req.params.userId
-
-      console.log(`este es el curso id ${cursoId}`)
-      console.log(`este es el curso id ${userId}`)
+      const userId = sessionId.globalUserId
 
       if (!cursoId) {
         return res.status(404).json({
