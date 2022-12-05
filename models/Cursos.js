@@ -8,7 +8,7 @@ const CursoSchema = new mongoose.Schema({
     descripcion : {
         type : String,
     },
-    filePath : {
+    filepath : {
         type : String,
         required: true
     },
