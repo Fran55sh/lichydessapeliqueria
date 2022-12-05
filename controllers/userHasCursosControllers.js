@@ -40,9 +40,8 @@ class addCursos {
         userId,
         cursoId,
       });
-    if (req.cookies.access_token) {
+   
       res.redirect('/misCursos')
-    } res.redirect('/')
     
 
     } catch (error) {
