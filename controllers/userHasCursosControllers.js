@@ -40,8 +40,10 @@ class addCursos {
         userId,
         cursoId,
       });
+      
+      if(req.cookies.userId){
       res.redirect('/misCursos')
-     
+      } res.redirect('/')
     } catch (error) {
       console.log("Failed to post curso to user")
       res.redirect('/')
