@@ -14,8 +14,8 @@ class PaymentService {
       payment_methods: paymentMethods,
     
       back_urls: {
-        failure: "/",
-        pending: "/",
+        failure: "https://www.lichydessa.com",
+        pending: "https://www.lichydessa.com",
         success: `https://www.lichydessa.com/api/cursos/add/${items[0].id}/${userId}`,
       }
     };
