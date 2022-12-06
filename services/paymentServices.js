@@ -7,7 +7,7 @@ const axios = require("axios");
 class PaymentService {
   async createPayment(items, paymentMethods, userId) {
     const url = "https://api.mercadopago.com/checkout/preferences";
-    console.log(`El usuario ${userId} compro el curso ${items.nombre}`)
+    console.log(`El usuario ${userId} compro el curso ${items.title}`)
     const body = {
       // payer_email: "test_user_93071437@testuser.com",
       items: items,
